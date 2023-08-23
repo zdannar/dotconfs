@@ -1,0 +1,23 @@
+[[language]]
+name = "rust"
+scope = "source.rust"
+injection-regex = "rust"
+file-types = ["rs"]
+roots = ["Cargo.toml", "Cargo.lock"]
+auto-format = true
+comment-token = "//"
+language-server = { command = "rust-analyzer" }
+config = { rust-analyzer.workspace.symbol.search.limit = 1048576 }
+indent = { tab-width = 4, unit = "    " }
+
+ [[language]]
+ name = "elixir"
+ scope = "source.elixir"
+ injection-regex = "elixir"
+ file-types = ["ex", "exs"]
+ roots = ["mix.exs"]
+ auto-format = true
+ diagnostic-severity = "Hint"
+ comment-token = "#"
+ indent = {tab-width = 2, unit = " "}
+ language-server = {command = "elixir-ls"}
